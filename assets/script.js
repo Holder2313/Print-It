@@ -37,8 +37,9 @@ function dotCreate(index) {
     newDot.setAttribute("data-positionArray", index) //ajout attribut data-positionArray
 
     newDot.addEventListener('click', e => {
-        counter = e.target.getAttribute("data-positionArray")  //recuparation attribut depuis l'evenement
+        counter = parseInt(e.target.getAttribute("data-positionArray") ) //recuparation attribut depuis l'evenement
         displayCurrentBanner(counter)
+        
     })
 
     if (index === 0) {
